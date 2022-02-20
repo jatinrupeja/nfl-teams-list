@@ -1,0 +1,15 @@
+nfl_teams_list.settings:
+  path: '/admin/config/nfl-teams/settings'
+  defaults:
+    _form: '\Drupal\nfl_teams_list\Form\AdminConfigurationForm'
+    _title: 'NFL Teams Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+    
+nfl_teams_list.content:
+  path: '/nfl-teams'
+  defaults:
+    _controller: '\Drupal\nfl_teams_list\Controller\NflTeamsController::content'
+    _title: 'NFL Teams'
+  requirements:
+    _permission: 'access content'

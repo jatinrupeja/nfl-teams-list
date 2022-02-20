@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function nfl_teams_list_theme($existing, $type, $theme, $path){
+  return [
+    'nfl_teams' => [
+      'variables' => [
+        'nfc' => NULL,
+        'afc' => NULL,
+      ]
+    ]
+  ];
+}
+
+/**
+ * Implements hook_cron().
+ */
+function nfl_teams_list_cron() {
+  $service = \Drupal::service('nfl_teams_client');
+  $cid = $service->getCid();
+  \Drupal::cache()->delete($cid);
+}

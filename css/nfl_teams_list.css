@@ -1,0 +1,119 @@
+/* Table Design */
+#nfc,
+#afc {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#nfc thead,
+#afc thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+
+#nfc thead tr th,
+#afc thead tr th {
+  font-weight: bold;
+  text-align: center;
+}
+
+#nfc tbody tr ,
+#afc tbody tr {
+  color: #555;
+}
+
+#nfc tbody tr td,
+#afc tbody tr td {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+/* Tabs Design. */
+.tabs input[type=radio] {
+  display: none;
+}
+
+.tabs label {
+  transition: background 0.4s ease-in-out, height 0.2s linear;
+  display: inline-block;
+  cursor: pointer;
+  color: #2ebeb9;
+  width: 49%;
+  height: 3em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #fcfcfc;
+  text-align: center;
+  line-height: 3em;
+}
+
+.tabs label:last-of-type {
+  border-bottom: none;
+}
+
+.tabs label:hover {
+  background: #259692;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1600px) {
+  .tabs label {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tabs label {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tabs label {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #c7c6c4;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tabs {
+    margin: 0;
+  }
+}
+
+#tab1:checked + label,
+#tab2:checked + label {
+  background: #2ebeb9;
+  color: #ffffff;
+}
+
+.tab-content {
+  position: absolute;
+  top: -9999px;
+  padding: 10px;
+}
+
+.tab-content-wrapper {
+  background: #fcfcfc;
+  border-top: #2ebeb9 5px solid;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .tab-content-wrapper,
+  .tab1-content-wrapper {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+#tab1:checked ~ .tab-content-wrapper #tab-content-1,
+#tab2:checked ~ .tab-content-wrapper #tab-content-2 {
+  position: relative;
+  top: 0px;
+}

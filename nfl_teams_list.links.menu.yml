@@ -1,0 +1,6 @@
+nfl_teams_list.settings:
+  title: 'NFL Teams API Settings'
+  description: 'API Settings For NFL Teams'
+  parent: system.admin_config_services
+  route_name: nfl_teams_list.settings
+  weight: 100

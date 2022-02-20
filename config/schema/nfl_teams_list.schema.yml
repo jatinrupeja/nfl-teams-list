@@ -1,0 +1,7 @@
+nfl_teams_list.settings:
+  type: config_object
+  label: "NFL Teams Settings"
+  mapping:
+    api_key:
+      type: string
+      label: "Api Key"

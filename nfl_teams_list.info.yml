@@ -1,0 +1,7 @@
+name: 'NFL Teams'
+type: module
+description: 'List of NFL Teams as a sortable table on a custom page: /nfl-teams and as a custom block'
+core_version_requirement: ^8|^9
+package: 'Custom'
+dependencies:
+  - drupal:block

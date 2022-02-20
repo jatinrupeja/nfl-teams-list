@@ -1,0 +1,58 @@
+{{ attach_library('nfl_teams_list/nfl_teams_list') }}
+
+<div class="tabs">
+  <input type="radio" name="tab" id="tab1" checked="checked">
+  <label for="tab1">National Football Conference</label>
+  <input type="radio" name="tab" id="tab2">
+  <label for="tab2">American Football Conference</label>
+
+  <div class="tab-content-wrapper">
+    <div id="tab-content-1" class="tab-content">
+      <table id="nfc">
+        <thead>
+          <tr>
+            <th><span>{{ 'ID'|t }}</span></th>
+            <th><span>{{ 'Name'|t }}</span></th>
+            <th><span>{{ 'Team'|t }}</span></th>
+            <th><span>{{ 'Division'|t }}</span></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          {% for team in nfc %}
+            <tr>
+              <td data-th="ID">{{ team.id }}</td>
+              <td data-th="Name">{{ team.name }}</td>
+              <td data-th="Team">{{ team.display_name }} {{ team.nickname }}</td>
+              <td data-th="Division">{{ team.division|t }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-content-2" class="tab-content">
+      <table id="afc">
+        <thead>
+          <tr>
+            <th><span>{{ 'ID'|t }}</span></th>
+            <th><span>{{ 'Name'|t }}</span></th>
+            <th><span>{{ 'Team'|t }}</span></th>
+            <th><span>{{ 'Division'|t }}</span></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          {% for team in afc %}
+            <tr>
+              <td data-th="ID">{{ team.id }}</td>
+              <td data-th="Name">{{ team.name }}</td>
+              <td data-th="Team">{{ team.display_name }} {{ team.nickname }}</td>
+              <td data-th="Division">{{ team.division|t }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
